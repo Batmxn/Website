@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 
 /* Basic styles */
@@ -15,13 +15,16 @@ body {
 
 .container {
     max-width: 1400px;
-    padding: 0px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
-s
+
 header {
     background-color: #333; /* Header background color */
     color: #fff; /* Header text color */
     padding: 30px 0;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 nav {
@@ -41,8 +44,6 @@ nav h1 {
     background-position: center;
     text-align: center;
     padding: 100px 0;
-    color: #fff; /* Text color in both light and dark mode */
-    margin: 0 auto; /* Center the hero section horizontally */
 }
 
 .hero h2 {
@@ -52,7 +53,6 @@ nav h1 {
 
 .hero p {
     font-size: 18px;
-
 }
 
 /* Dark mode styles */
@@ -135,8 +135,6 @@ body:not(.dark-mode) {
 .toggle-label {
     margin-left: 10px;
 }
-
-/* Styles for the navigation bar */
 nav {
     float: right;
 }
@@ -148,7 +146,7 @@ nav ul {
 
 nav li {
     float: left;
-    margin-left: 35px;
+    margin-left:  35px;
     padding-right: 50px;
 }
 
@@ -158,4 +156,9 @@ nav a {
     text-transform: uppercase;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 20px;
+}
+
+h1 {
+    float: left;
+
 }
