@@ -5,6 +5,7 @@ const heroText = document.querySelector('.hero');
 
 darkModeToggle.addEventListener('change', () => {
     if (darkModeToggle.checked) {
+        window.localStorage.setItem('dark-mode','true')
         body.classList.add('dark-mode');
         navHeader.style.color = '#fff'; // Text color in dark mode
         heroText.style.color = '#fff'; // Text color in dark mode
@@ -14,3 +15,9 @@ darkModeToggle.addEventListener('change', () => {
         heroText.style.color = '#fff'; // Default text color
     }
 });
+
+window.localStorage.setItem('dark-mode')
+
+if(window.localStorage.getItem('dark-mode')){
+
+}
