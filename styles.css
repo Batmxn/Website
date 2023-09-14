@@ -39,7 +39,7 @@ nav h1 {
 
 /* Styling for the hero section */
 .hero {
-    background-image: url('background-image.jpg'); /* Replace with your image */
+    background-image: url('background-image.jpg'); 
     background-size: cover;
     background-position: center;
     text-align: center;

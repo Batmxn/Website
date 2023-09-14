@@ -6,13 +6,14 @@
     <title>About Me</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <h1 class="logo">Oliver Smith</h1>
+                <h1 class="logo" id="logo">Oliver Smith</h1>
                 <nav>
-                    <ul class="nav-links">
+                    <ul class="nav-links" id="navigation-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="projects.html">Projects</a></li>
@@ -24,19 +25,20 @@
         </div>
     </header>
 
-    <section class="about-content">
-        <div class="container">
-            <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-    </section>
+
 
     <!-- Rest of your content for the About Page -->
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Your Name. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span class="toggle-label">Theme</span>
+    </div>
+
+
+    <script src="./src/index.js"></script>
+
 </body>
 </html>
