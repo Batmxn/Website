@@ -14,18 +14,12 @@ body {
 }
 
 .container-head {
-    max-width: 1400px;
+    max-width: 2000px;
     padding: 0 20px;
     margin: 0 auto;
     color: #fff;
 }
 
-.container-body {
-    max-width: 1400px;
-    padding: 0 20px;
-    margin: 0 auto;
-    color: #333;
-}
 
 header {
     background-color: #333; /* Header background color */
@@ -51,7 +45,7 @@ nav h1 {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 100px 0;
+    padding: 0px 0;
 }
 
 .hero h2 {
