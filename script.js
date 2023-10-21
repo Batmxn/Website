@@ -35,3 +35,17 @@ darkModeToggle.addEventListener('change', () => {
         heroText.style.color = '#fff'; // Default text color
     }
 });
+
+const cookieButton = document.getElementById('cookieButton');
+const cookiePopout = document.getElementById('cookiePopout');
+let popoutVisible = false;
+
+cookieButton.addEventListener('click', () => {
+    if (popoutVisible) {
+        cookiePopout.style.display = 'none';
+        popoutVisible = false;
+    } else {
+        cookiePopout.style.display = 'block';
+        popoutVisible = true;
+    }
+});

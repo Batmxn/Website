@@ -31,16 +31,34 @@
         </div>
     </section>
 
-    <div class="switch-container">
-        <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle">
-            <span class="slider round"></span>
-        </label>
-        <span class="toggle-label">Theme</span>
+    <button id="cookieButton" class="cookie-button"></button>
+    <div id="cookiePopout" class="cookie-popout">
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label">Theme</span>
+        </div>
     </div>
 
+<script>
+    const cookieButton = document.getElementById('cookieButton');
+const cookiePopout = document.getElementById('cookiePopout');
+let popoutVisible = false;
 
-    <script src="./src/index.js"></script>
+cookieButton.addEventListener('click', () => {
+    if (popoutVisible) {
+        cookiePopout.style.display = 'none';
+        popoutVisible = false;
+    } else {
+        cookiePopout.style.display = 'block';
+        popoutVisible = true;
+    }
+});
+</script>
+    
+<script src="./src/index.js"></script>
 
 
 </body>

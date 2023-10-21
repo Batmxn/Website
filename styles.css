@@ -11,6 +11,7 @@ body {
     background-color: #D1D1D1; /* Default background color */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition both background and text color */
     color: #000; /* Default text color */
+    overflow-x: hidden;
 }
 
 .container-head {
@@ -77,24 +78,22 @@ header.dark-mode {
 
 /* Rounded toggle switch styles */
 .switch-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 10px;
     display: flex;
     align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .switch {
-    position: relative;
     display: inline-block;
-    width: 40px;
-    height: 20px;
+    width: 30px; /* Reduce the width */
+    height: 15px; /* Reduce the height */
     background-color: #ccc;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
+    margin-right: 10px; /* Add some spacing */
 }
+
 
 .switch input {
     opacity: 0;
@@ -102,27 +101,6 @@ header.dark-mode {
     height: 0;
 }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fff;
-    transition: 0.4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 2px;
-    bottom: 2px;
-    background-color: #333;
-    transition: 0.4s;
-}
 
 input:checked + .slider {
     background-color: #2196F3; /* Toggle switch background color when in dark mode */
@@ -172,4 +150,33 @@ nav a {
 h1 {
     float: left;
 
+}
+
+.cookie-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    line-height: 75px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('settings.png'); /* Set your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cookie-popout {
+    position: fixed;
+    bottom: 60px; /* Adjust to your preference */
+    left: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
 }
