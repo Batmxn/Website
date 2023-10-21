@@ -26,14 +26,34 @@
         </div>
     </header>
 
-    <section class="about-content">
-        <div class="container">
-            <h3>Contact info will be here</h3>
-            <p></p>
-        </div>
-    </section>
+    <div class="container">
+        <a class="circle" href="https://github.com/Batmxn" style="background-image: url('github.png');"></a>
+        <a class="circle" href="mailto:siroliversmith@outlook.com" style="background-image: url('email.png');"></a>
+        <a class="circle" href="https://www.instagram.com/mroliverjsmith/" style="background-image: url('instagram.png');"></a>
+        <a class="circle" href="https://www.facebook.com/mroliverjsmith" style="background-image: url('facebook.png');"></a>
+        <a class="circle" href="https://uk.linkedin.com/" style="background-image: url('linkedin.png');"></a>
+        <a class="circle" href="tel:7593964791" style="background-image: url('phone.png');"></a>
+    </div>
 
-    <!-- Rest of your content for the About Page -->
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; 
+            }
+
+            .circle {
+                width: 256px; /* Updated width */
+                height: 256px; /* Updated height */
+                background-color: white; /* Set the background color of the circle */
+                background-size: cover; /* Scale the image to cover the entire circle */
+                background-position: center; /* Center the image within the circle */
+                border-radius: 50%;
+                margin: 10px; /* Adjust this value to control the spacing between circles */
+            }
+
+        </style>
 
     <div class="switch-container">
         <label class="switch">
@@ -46,10 +66,6 @@
 
     <script src="./src/index.js"></script>
 
-    <footer>
-        <div class="container">
-            <p></p>
-        </div>
-    </footer>
+
 </body>
 </html>
