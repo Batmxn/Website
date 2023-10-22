@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Rewrite rules for specific pages
+RewriteRule ^$ index.html [L]
+RewriteRule ^about$ about.html [L]
+RewriteRule ^projects$ projects.html [L]
+RewriteRule ^documents$ documents.html [L]
+RewriteRule ^contact$ contact.html [L]
