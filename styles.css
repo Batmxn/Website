@@ -159,8 +159,8 @@ h1 {
     background-color: white;
     border: none;
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     line-height: 75px;
     text-align: center;
     cursor: pointer;
@@ -180,3 +180,7 @@ h1 {
     padding: 10px;
     display: none;
 }
+
+
+
+
