@@ -25,18 +25,18 @@
             </div>
         </div>
     </header>
-
-    <section class="about-content">
-        <div class="container">
-            <h3>Documents will be here</h3>
-            <p></p>
+    <main>
+        <div class="search-page">
+            <div class="search-header">
+                <h3 class="search-heading" style="font-size: 60px;">Search Documents</h3>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search documents...">
+                <ul id="search-results"></ul>
+            </div>
         </div>
-    </section>
-    
 
-    <!-- Rest of your content for the About Page -->
-
-    <button id="cookieButton" class="cookie-button"></button>
+        <button id="cookieButton" class="cookie-button"></button>
     <div id="cookiePopout" class="cookie-popout">
         <div class="switch-container">
             <label class="switch">
@@ -46,9 +46,119 @@
             <span class="toggle-label">Theme</span>
         </div>
     </div>
+    
 
-<script>
-    const cookieButton = document.getElementById('cookieButton');
+    <script src="./src/index.js"></script>
+
+    <script>
+        // Define your document index with sample data (replace with your own documents)
+const documentIndex = [
+    {
+        name: "CV",
+        description: "My CV",
+        path: "cv.pdf",
+    },
+    {
+        name: "Personal Statement",
+        description: "Post-16",
+        path: "personalstatement.docx",
+    },
+    // Add more documents to your index as needed
+];
+
+// Function to perform a search
+function searchDocuments(query) {
+    // Convert the query to lowercase for case-insensitive search
+    query = query.toLowerCase();
+    
+    // Filter documents based on the query
+    return documentIndex.filter(document => document.name.toLowerCase().includes(query));
+}
+
+// Function to update the search results on the page
+function updateSearchResults(results) {
+    const searchResults = document.getElementById('search-results');
+    
+    // Generate HTML for the search results
+    const resultList = results.map(document => {
+        return `<li>
+            <strong>${document.name}</strong> - ${document.description}
+            <button class="request-document" data-name="${document.name}" href="requestform.html">Request Document</button>
+        </li>`;
+    });
+
+    // Update the search results container
+    searchResults.innerHTML = resultList.join('');
+}
+
+// Event listener for search input
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', () => {
+    // Get the search query from the input field
+    const query = searchInput.value;
+    
+    // Perform the search
+    const results = searchDocuments(query);
+    
+    // Update the search results on the page
+    updateSearchResults(results);
+});
+
+// Event listener for document request button
+const searchResults = document.getElementById('search-results');
+searchResults.addEventListener('click', (e) => {
+    if (e.target.classList.contains('request-document')) {
+        const documentName = e.target.getAttribute('data-name');
+
+        // Generate the link to another HTML page based on the document name
+        const documentLink = getDocumentLink(documentName);
+
+        // Redirect to the new page
+        window.location.href = documentLink;
+    }
+});
+
+// Event listener for document request button
+searchResults.addEventListener('click', (e) => {
+    if (e.target.classList.contains('request-document')) {
+        const documentName = e.target.getAttribute('data-name');
+        // Set the document name in the hidden input field
+        document.getElementById('document-name').value = documentName;
+
+        // Show the request form
+        const requestFormContainer = document.querySelector('.request-form-container');
+        requestFormContainer.style.display = 'block';
+    }
+});
+
+// Event listener for form submission
+const requestForm = document.getElementById('request-form');
+requestForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Gather user's contact details from the form
+    const documentName = document.getElementById('document-name').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+});
+
+// Function to get the link for a specific document
+function getDocumentLink(documentName) {
+    if (documentName === 'CV') {
+        return 'cv.pdf'; // Replace with the actual path to your CV PDF file
+    } else if (documentName === 'Personal Statement') {
+        return 'personalstatement.docx'; // Replace with the actual HTML page name for your personal statement
+    } else if (documentName === 'Request Document') {
+        return 'requestform.html'; // Link to your "requestform.html" page
+    } else {
+        // Handle other documents or provide a default link
+        return 'default.html'; // Replace with a default page name
+    }
+}
+
+const cookieButton = document.getElementById('cookieButton');
 const cookiePopout = document.getElementById('cookiePopout');
 let popoutVisible = false;
 
@@ -61,10 +171,7 @@ cookieButton.addEventListener('click', () => {
         popoutVisible = true;
     }
 });
-</script>
-
-
-    <script src="./src/index.js"></script>
+    </script>
 
     <footer>
         <div class="container">

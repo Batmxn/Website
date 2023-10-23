@@ -89,7 +89,7 @@ header.dark-mode {
     display: inline-block;
     width: 30px; /* Reduce the width */
     height: 15px; /* Reduce the height */
-    background-color: #ccc;
+    background-color: #2196F3;
     border-radius: 10px;
     margin-right: 10px; /* Add some spacing */
 }
@@ -103,7 +103,7 @@ header.dark-mode {
 
 
 input:checked + .slider {
-    background-color: #2196F3; /* Toggle switch background color when in dark mode */
+    background-color: #fff; /* Toggle switch background color when in dark mode */
 }
 
 input:checked + .slider:before {
@@ -175,10 +175,64 @@ h1 {
     bottom: 60px; /* Adjust to your preference */
     left: 20px;
     background-color: white;
-    border: 1px solid #ccc;
+    border: 1px solid #fff;
     border-radius: 5px;
     padding: 10px;
     display: none;
+}
+
+
+.search-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 200px;
+    text-align: center;
+
+}
+
+.search-container {
+    max-width: 800px;
+    border-radius: 5px;
+    padding-top: 30px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-results {
+    list-style: none;
+    padding: 0;
+    color: #000;
+}
+
+#search-results li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.request-document {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-heading {
+    padding-left: 30px;
+
 }
 
 
