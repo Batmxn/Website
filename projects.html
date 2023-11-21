@@ -1,13 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
-</head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 300px;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: white;
+            display: flex;
+            flex-direction: column; /* Add this line */
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .grid-item a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            width: 100%;
+            height: 50%;
+        }
+
+        .paragraph-text {
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+    </style>
+</head>
 <body>
     <header>
         <div class="container-head">
@@ -25,16 +66,80 @@
             </div>
         </div>
     </header>
-
-    <section class="about-content">
-        <div class="container">
-            <h3>Projects will be here</h3>
-            <p></p>
+    <div class="grid-container">
+        <div class="grid-item" style="color: black;">
+            <a href="https://github.com/Batmxn/Morse-Code"><span>Morse-Code Translator</span></a>
+            <p class="paragraph-text">This program allows for a user to translate text to Morse-Code and vice versa using python</p>
         </div>
-    </section>
-
-    <!-- Rest of your content for the About Page -->
-
+        <div class="grid-item" style="color: black;">
+            <a href="https://github.com/Batmxn/School-Coding"><span>OCR Project</span></a>
+            <p class="paragraph-text">The project was to create a quiz in which the user has to guess the song name and has 3 attempts before they lose. This was coded entirely in python and was an OCR required project</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="https://github.com/Batmxn/Calculator"><span>Calculator</span></a>
+            <p class="paragraph-text">This was my first project as I followed a youtube tutorial to create a web based calculator using Html, CSS and JavaScript.</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        <div class="grid-item" style="color: black;">
+            <a href="#"><span>Project</span></a>
+            <p class="paragraph-text">Description</p>
+        </div>
+        
     <button id="cookieButton" class="cookie-button"></button>
     <div id="cookiePopout" class="cookie-popout">
         <div class="switch-container">
